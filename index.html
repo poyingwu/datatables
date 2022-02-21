@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <title>Data Tables</title>
+</head>
+<body>
+    <table id="tableObj" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Salary</th>
+                <th>Start Date</th>
+                <th>Department</th>
+            </tr>
+        </thead>
+    </table>
+    <script>
+        $(document).ready( function () {
+            var data = [
+                        {
+                            "name":       "Albert Wu",
+                            "position":   "Frontend Developer",
+                            "salary":     "$5,000",
+                            "start_date": "2022/02/20",
+                            "department": "Information Technology",
+                        },
+                        {
+                            "name":       "Daniel Lin",
+                            "position":   "Graphic Designer",
+                            "salary":     "$4,500",
+                            "start_date": "2022/01/10",
+                            "department": "Design",
+                        },
+                        
+                    ]
+    
+            $('#tableObj').DataTable({
+                "data": data,
+                // "columns": [
+                // { data: 'name',title: "Name" },
+                // { data: 'position',title: "Position" },
+                // { data: 'salary',title: "Salary" },
+                // { data: 'start_date',title: "Start Date" },
+                // { data: 'department',title: "Department" },
+                // ]
+                "columns": [
+                { data: 'name' },
+                { data: 'position' },
+                { data: 'salary' },
+                { data: 'start_date' },
+                { data: 'department'},
+                ]
+            })
+    
+        });
+    </script>
+</body>
+</html>
